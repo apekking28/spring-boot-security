@@ -3,8 +3,8 @@ package com.aepkking.security;
 public enum ApplicationUserPermission {
     STUDENT_READ("student:read"),
     STUDENT_WRITE("student:write"),
-    COURSE_READ("admin:read"),
-    COURSE_WRITE("admin:write");
+    COURSE_READ("course:read"),
+    COURSE_WRITE("course:write");
 
     private final String permission;
 
