@@ -10,6 +10,7 @@ import java.util.Optional;
 
 import static com.aepkking.security.ApplicationUserRole.*;
 
+
 @Repository("fake")
 public class FakeApplicationUserDaoService implements ApplicationUserDao {
 
@@ -21,7 +22,7 @@ public class FakeApplicationUserDaoService implements ApplicationUserDao {
     }
 
     @Override
-    public Optional<ApplicationUser> selectApplicationUserByUserName(String username) {
+    public Optional<ApplicationUser> selectApplicationUserByUsername(String username) {
         return getApplicationUsers()
                 .stream()
                 .filter(applicationUser -> username.equals(applicationUser.getUsername()))
@@ -57,7 +58,8 @@ public class FakeApplicationUserDaoService implements ApplicationUserDao {
                         true,
                         true
                 )
-                );
+        );
+
         return applicationUsers;
     }
 }
